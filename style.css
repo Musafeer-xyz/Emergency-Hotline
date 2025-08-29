@@ -1,62 +1,4 @@
-/* --- Responsiveness --- */
 
-/* For Tablet Devices */
-@media (max-width: 1024px) {
-    .main-content {
-        /* Stack the history panel below the cards */
-        flex-direction: column;
-    }
-
-    .history-section {
-        /* Allow the history panel to take the full width */
-        flex-basis: auto;
-        width: 100%;
-    }
-
-    .card-grid {
-        /* Change from 3 columns to 2 */
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* For Mobile Devices */
-@media (max-width: 768px) {
-    .navbar {
-        /* Stack the logo and the stats vertically */
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
-    .hero-section {
-        padding: 2rem 1rem;
-    }
-
-    .hero-section h1 {
-        /* Reduce the main title's font size */
-        font-size: 2rem;
-    }
-
-    .main-content {
-        /* Reduce the padding on the sides */
-        padding: 1.5rem 1rem;
-    }
-
-    .card-grid {
-        /* Change from 2 columns to a single column */
-        grid-template-columns: 1fr;
-    }
-}
-
-/* For small mobile devices to handle navbar items */
-@media (max-width: 480px) {
-    .nav-right {
-        /* Allow the stat pills and button to wrap onto a new line if needed */
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
-}
 /* Basic Reset and Font Setup */
 :root {
     --primary-green: #00A651;
@@ -139,11 +81,16 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
-    font-weight: 700; /* Bolder text */
-    background-color: #F0FFF7; /* Light green background */
-    padding: 0.5rem 1.25rem; /* Vertical and horizontal padding */
-    border-radius: 50px; /* This creates the pill shape */
-    border: 1px solid #DDFCEB; /* Adds a subtle border */
+    font-weight: 700;
+    /* Bolder text */
+    background-color: #F0FFF7;
+    /* Light green background */
+    padding: 0.5rem 1.25rem;
+    /* Vertical and horizontal padding */
+    border-radius: 50px;
+    /* This creates the pill shape */
+    border: 1px solid #DDFCEB;
+    /* Adds a subtle border */
 }
 
 /* Styling for the heart and coin images */
@@ -160,7 +107,8 @@ body {
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
-    border-radius: 50px; /* This creates the pill shape */
+    border-radius: 50px;
+    /* This creates the pill shape */
     font-family: var(--font-roboto);
     font-weight: 500;
     cursor: pointer;
@@ -172,7 +120,8 @@ body {
     --background-light-green: #F8FFF9;
     --text-dark: #2A2A2A;
     --text-light: #6B6B6B;
-    --text-white: #FFFFFF; /* Added for hero section text */
+    --text-white: #FFFFFF;
+    /* Added for hero section text */
     --border-color: #EAEAEA;
     --font-roboto: 'Roboto', sans-serif;
     --font-inter: 'Inter', sans-serif;
@@ -192,8 +141,10 @@ body {
 }
 
 .gov-logo {
-    height: 70px; /* Slightly larger logo */
-    margin-bottom: 1.5rem; /* More space below logo */
+    height: 70px;
+    /* Slightly larger logo */
+    margin-bottom: 1.5rem;
+    /* More space below logo */
 }
 
 .hero-section h1 {
@@ -207,8 +158,10 @@ body {
     font-family: var(--font-madurai);
     font-size: 20px;
     color: var(--text-white);
-    max-width: 15000px; /* Wider slogan */
-    margin: 0 auto; /* Center the slogan */
+    max-width: 15000px;
+    /* Wider slogan */
+    margin: 0 auto;
+    /* Center the slogan */
 }
 
 /* --- Main Content & Cards --- */
@@ -216,8 +169,10 @@ body {
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    align-items: flex-start; /* Aligns items to the top */
-    background-color: #F8F9FA; /* Light grey background for the whole section */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    background-color: #F8F9FA;
+    /* Light grey background for the whole section */
 }
 
 /* Card Grid Layout */
@@ -253,7 +208,8 @@ body {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background-color: var(--icon-bg); /* Uses variable from inline style */
+    background-color: var(--icon-bg);
+    /* Uses variable from inline style */
 }
 
 .card-icon-bg img {
@@ -303,11 +259,13 @@ body {
     border-radius: 6px;
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
-    align-self: flex-start; /* Ensures badge doesn't stretch */
+    align-self: flex-start;
+    /* Ensures badge doesn't stretch */
 }
 
 .card-buttons {
-    margin-top: auto; /* Pushes buttons to the very bottom */
+    margin-top: auto;
+    /* Pushes buttons to the very bottom */
     display: flex;
     gap: 1rem;
 }
@@ -335,8 +293,10 @@ body {
 
 /* History Section Styling */
 .history-section {
-    flex-basis: 350px; /* Fixed width */
-    flex-shrink: 0; /* Prevents shrinking */
+    flex-basis: 350px;
+    /* Fixed width */
+    flex-shrink: 0;
+    /* Prevents shrinking */
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
@@ -370,4 +330,35 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+/* For TABLET view (screens 1024px wide or less) */
+@media (max-width: 1024px) {
+    .main-content {
+        /* This stacks the history section below the cards */
+        flex-direction: column;
+    }
+
+    .history-section {
+        /* This makes the history section take the full width */
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .card-grid {
+        /* This changes the grid to 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For MOBILE view (screens 768px wide or less) */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .card-grid {
+        /* This changes the grid to a SINGLE column */
+        grid-template-columns: 1fr;
+    }
 }
