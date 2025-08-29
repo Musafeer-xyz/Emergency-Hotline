@@ -1,3 +1,62 @@
+/* --- Responsiveness --- */
+
+/* For Tablet Devices */
+@media (max-width: 1024px) {
+    .main-content {
+        /* Stack the history panel below the cards */
+        flex-direction: column;
+    }
+
+    .history-section {
+        /* Allow the history panel to take the full width */
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .card-grid {
+        /* Change from 3 columns to 2 */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        /* Stack the logo and the stats vertically */
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .hero-section h1 {
+        /* Reduce the main title's font size */
+        font-size: 2rem;
+    }
+
+    .main-content {
+        /* Reduce the padding on the sides */
+        padding: 1.5rem 1rem;
+    }
+
+    .card-grid {
+        /* Change from 2 columns to a single column */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For small mobile devices to handle navbar items */
+@media (max-width: 480px) {
+    .nav-right {
+        /* Allow the stat pills and button to wrap onto a new line if needed */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
 /* Basic Reset and Font Setup */
 :root {
     --primary-green: #00A651;
