@@ -139,15 +139,176 @@ body {
 
 .hero-section h1 {
     font-family: var(--font-madurai);
-    font-size: 2.8rem; /* Larger title */
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
 
 .hero-section p {
-    font-family: var(--font-roboto);
-    font-size: 1.1rem;
+    font-family: var(--font-madurai);
+    font-size: 20px;
     color: var(--text-white);
-    max-width: 700px; /* Wider slogan */
+    max-width: 15000px; /* Wider slogan */
     margin: 0 auto; /* Center the slogan */
+}
+
+/* --- Main Content & Cards --- */
+.main-content {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: flex-start; /* Aligns items to the top */
+    background-color: #F8F9FA; /* Light grey background for the whole section */
+}
+
+/* Card Grid Layout */
+/* Card Grid Layout */
+.card-grid {
+    flex-grow: 1;
+    display: grid;
+    /* Explicitly set to 3 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Individual Service Card Styling */
+.service-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.card-icon-bg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--icon-bg); /* Uses variable from inline style */
+}
+
+.card-icon-bg img {
+    height: 32px;
+    width: 32px;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: #DBDBDB;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.heart-icon.active {
+    color: #FF4B4B;
+    transform: scale(1.1);
+}
+
+.service-name {
+    font-family: var(--font-madurai);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.service-subtitle {
+    font-family: var(--font-roboto);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.service-number {
+    font-family: var(--font-roboto);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 1rem 0;
+}
+
+.service-badge {
+    display: inline-block;
+    background-color: #F3F3F3;
+    color: var(--text-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    align-self: flex-start; /* Ensures badge doesn't stretch */
+}
+
+.card-buttons {
+    margin-top: auto; /* Pushes buttons to the very bottom */
+    display: flex;
+    gap: 1rem;
+}
+
+.card-buttons button {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--font-inter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-buttons .btn-primary {
+    background-color: var(--primary-green);
+    color: white;
+    border-color: var(--primary-green);
+}
+
+/* History Section Styling */
+.history-section {
+    flex-basis: 350px; /* Fixed width */
+    flex-shrink: 0; /* Prevents shrinking */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.history-header h4 {
+    font-family: var(--font-madurai);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-clear {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
