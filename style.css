@@ -106,3 +106,48 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
+
+/* Basic Reset and Font Setup */
+:root {
+    --primary-green: #00A651;
+    --background-light-green: #F8FFF9;
+    --text-dark: #2A2A2A;
+    --text-light: #6B6B6B;
+    --text-white: #FFFFFF; /* Added for hero section text */
+    --border-color: #EAEAEA;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-madurai: 'Hind Madurai', sans-serif;
+}
+
+/* ... (your existing body and navbar styles) ... */
+
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    /* Updated with the precise gradient from Figma */
+    background: linear-gradient(180deg, #013223 0%, #006747 50%, #013223 100%);
+    color: var(--text-white);
+}
+
+.gov-logo {
+    height: 70px; /* Slightly larger logo */
+    margin-bottom: 1.5rem; /* More space below logo */
+}
+
+.hero-section h1 {
+    font-family: var(--font-madurai);
+    font-size: 2.8rem; /* Larger title */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero-section p {
+    font-family: var(--font-roboto);
+    font-size: 1.1rem;
+    color: var(--text-white);
+    max-width: 700px; /* Wider slogan */
+    margin: 0 auto; /* Center the slogan */
+}
