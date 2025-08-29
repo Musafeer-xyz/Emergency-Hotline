@@ -291,6 +291,28 @@ body {
     border-color: var(--primary-green);
 }
 
+/* --- Button Hover Effects --- */
+
+/* First, add a smooth transition to all buttons on the cards */
+.card-buttons button {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Style for the green "Call" button on hover */
+.card-buttons .btn-primary:hover {
+    background-color: #008f45; /* A slightly darker green */
+    border-color: #008f45;
+    transform: translateY(-2px); /* Lifts the button slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Style for the white "Copy" button on hover */
+.card-buttons .btn-secondary:hover {
+    background-color: #F0FFF7; /* A very light green */
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
 /* History Section Styling */
 .history-section {
     flex-basis: 350px;
