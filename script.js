@@ -1,16 +1,11 @@
-// Wait for the entire HTML document to be loaded before running the script
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===================================================================
-    // --- STATE VARIABLES ---
-    // ===================================================================
     let heartCount = 0;
     let coins = 100;
     let copyCount = 2; // Initial count from the design
 
-    // ===================================================================
-    // --- DOM ELEMENT SELECTORS ---
-    // ===================================================================
+
     const heartCountEl = document.getElementById('heart-count');
     const coinCountEl = document.getElementById('coin-count');
     const navbarCopyBtnEl = document.getElementById('copy-btn');
@@ -18,28 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const callButtons = document.querySelectorAll('.call-btn');
     const historyListEl = document.getElementById('history-list');
     const clearHistoryBtn = document.getElementById('clear-history-btn');
-    const cardCopyButtons = document.querySelectorAll('.card-copy-btn'); // Selects the buttons you just updated
+    const cardCopyButtons = document.querySelectorAll('.card-copy-btn');
 
-    // ===================================================================
-    // --- FUNCTIONS ---
-    // ===================================================================
 
-    // Updates the heart count display in the navbar
     const updateHeartCountDisplay = () => {
         heartCountEl.textContent = heartCount;
     };
 
-    // Updates the coin count display in the navbar
+
     const updateCoinCountDisplay = () => {
         coinCountEl.textContent = coins;
     };
-    
-    // Updates the copy count display in the navbar
+
+
     const updateCopyCountDisplay = () => {
         navbarCopyBtnEl.textContent = `${copyCount} Copy`;
     };
 
-    // Creates and adds a history item to the list
+
     const addCallToHistory = (serviceName, serviceNumber) => {
         const now = new Date();
         const timeString = now.toLocaleTimeString('en-US', {
@@ -57,11 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         historyListEl.prepend(historyItem);
     };
 
-    // ===================================================================
-    // --- EVENT LISTENERS ---
-    // ===================================================================
-
-    // Event Listener for Heart Icons
     heartIcons.forEach(icon => {
         icon.addEventListener('click', () => {
             const isNowActive = icon.classList.toggle('active');
@@ -70,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Event Listener for Call Buttons
+
     callButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             if (coins < 20) {
@@ -87,39 +73,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Event listener for the "Clear History" button
+
     clearHistoryBtn.addEventListener('click', () => {
         historyListEl.innerHTML = '';
     });
 
-    // Event listener for the "Copy" buttons on the cards
+
     cardCopyButtons.forEach(button => {
         button.addEventListener('click', (event) => {
-            // 1. Get the service number from the parent card
+
             const card = event.target.closest('.service-card');
             const numberToCopy = card.querySelector('.service-number').textContent.trim();
 
-            // 2. Use the modern Clipboard API to copy the text
+
             navigator.clipboard.writeText(numberToCopy).then(() => {
-                // This block runs if the copy was successful
-                // 3. Show a success alert
+
                 alert(`Copied "${numberToCopy}" to clipboard!`);
 
-                // 4. Increase the copy count and update the navbar display
+
                 copyCount++;
                 updateCopyCountDisplay();
 
             }).catch(err => {
-                // This block runs if the copy failed for any reason
+
                 console.error('Failed to copy text: ', err);
                 alert('Could not copy text. Please try again.');
             });
         });
     });
 
-    // ===================================================================
-    // --- INITIALIZATION ---
-    // ===================================================================
+
     updateHeartCountDisplay();
     updateCoinCountDisplay();
     updateCopyCountDisplay();
