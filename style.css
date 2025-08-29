@@ -1,0 +1,108 @@
+/* Basic Reset and Font Setup */
+:root {
+    --primary-green: #00A651;
+    --background-light-green: #F8FFF9;
+    --text-dark: #2A2A2A;
+    --text-light: #6B6B6B;
+    --border-color: #EAEAEA;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-madurai: 'Hind Madurai', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--background-light-green);
+    color: var(--text-dark);
+}
+
+/* Basic Reset and Font Setup */
+:root {
+    --primary-green: #00A651;
+    --background-light-green: #F8FFF9;
+    --text-dark: #2A2A2A;
+    --border-color: #EAEAEA;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--background-light-green);
+    color: var(--text-dark);
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.website-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700; /* Bolder text */
+    background-color: #F0FFF7; /* Light green background */
+    padding: 0.5rem 1.25rem; /* Vertical and horizontal padding */
+    border-radius: 50px; /* This creates the pill shape */
+    border: 1px solid #DDFCEB; /* Adds a subtle border */
+}
+
+/* Styling for the heart and coin images */
+.heart-icon {
+    height: 22px;
+}
+
+.coin-icon {
+    height: 24px;
+}
+
+.copy-button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* This creates the pill shape */
+    font-family: var(--font-roboto);
+    font-weight: 500;
+    cursor: pointer;
+}
